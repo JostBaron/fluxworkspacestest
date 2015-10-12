@@ -1,0 +1,33 @@
+{namespace flux=FluidTYPO3\Flux\ViewHelpers}
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+<f:layout name="Content" />
+<div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:flux="http://fedext.net/ns/flux/ViewHelpers"
+     xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
+     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+<f:section name="Configuration">
+	<flux:form
+            id="container"
+            label="Container element"
+            description="Container element"
+            options="{
+                group:  'Testelements'
+            }"
+    >
+        <flux:form.content
+            name="containercontent"
+            label="Container content"
+        />
+	</flux:form>
+</f:section>
+
+<f:section name="Preview"/>
+
+<f:section name="Main">
+    <div class="container">
+        <flux:content.render area="containercontent"/>
+    </div>
+</f:section>
+
+</div>
